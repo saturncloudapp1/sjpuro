@@ -1,5 +1,5 @@
 const http = require('http');
-
+const host = "0.0.0.0"
 const server = http.createServer((req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -15,6 +15,6 @@ const server = http.createServer((req, res) => {
 
 const port = 8000;
 
-server.listen(port, () => {
+server.listen(port,host, () => {
   console.log(`Servidor ouvindo na porta ${port}`);
 });
